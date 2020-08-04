@@ -18,7 +18,7 @@ const generateTempalate = (todo) => {
                     <span class="check"></span>
                     ${todo}
                   </label>
-                  <i class="fa fa-trash-o" aria-hidden="true"></i>
+                  <i class="fa fa-trash-o delete" aria-hidden="true"></i>
                 </li>`
   todoList.innerHTML += html;
 };
@@ -39,3 +39,11 @@ submitForm.addEventListener('submit', addTodos);
 addButton.addEventListener('click', addTodos);
 
 
+
+function deleteTodos(e) {
+  if (e.target.classList.contains('delete')) {
+    e.target.parentElement.remove();
+  }
+}
+
+todoList.addEventListener('click', deleteTodos);

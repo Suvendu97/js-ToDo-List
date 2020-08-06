@@ -13,6 +13,15 @@ body {
   font-family: 'Nunito', serif;
 }
 
+#total  {
+  color: red;
+}
+
+#total-task  {
+  color: red;
+}
+
+
 
 button, input, select, textarea {
   font-family: inherit;
@@ -228,3 +237,4 @@ button, input, select, textarea {
   transform: scale(1.3);
   transition: opacity 300ms cubic-bezier(0.2, 0, 0, 1), transform 400ms cubic-bezier(0.3, 0, 0, 1.4);
 }
+

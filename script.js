@@ -7,7 +7,7 @@ const list = document.querySelectorAll('.todos li');
 
 // lenth of my Todo list
 let listLenght = list.lenght;
- // document.getElementById("total").innerHTML= listLenght;
+ 
 
 // adding new elements in my list item
 const generateTempalate = (todo) => {
@@ -47,3 +47,7 @@ function deleteTodos(e) {
 }
 
 todoList.addEventListener('click', deleteTodos);
+
+
+
+document.getElementById("total").innerHTML = list.length;

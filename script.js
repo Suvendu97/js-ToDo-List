@@ -6,7 +6,7 @@ const todoList = document.querySelector('.todos');
 const list = document.querySelectorAll('.todos li'); 
 
 // lenth of my Todo list
-let listLenght = list.lenght;
+var listLenght = list.length;
  
 
 // adding new elements in my list item
@@ -32,6 +32,9 @@ function addTodos(e) {
     listLenght = listLenght + 1;
     generateTempalate(todo);
     submitForm.reset();
+    window.alert("new task added. remaining tasks: "+listLenght);
+
+
   }
 }
 
@@ -43,11 +46,24 @@ addButton.addEventListener('click', addTodos);
 function deleteTodos(e) {
   if (e.target.classList.contains('delete')) {
     e.target.parentElement.remove();
+    listLenght = listLenght - 1;
+    window.alert("task deleted. remaining tasks: "+listLenght);
   }
 }
 
 todoList.addEventListener('click', deleteTodos);
 
 
+// count the total list items 
+// function count()
+// {
+//     var ul=document.getElementById("todos");
+//     var i=0,itemcount=0;
+//     while(ul.getElementByTagName('li')[i++])
+//     itemcount++;
+//     return itemcount;
+// }
 
-document.getElementById("total").innerHTML = list.length;
+// document.getElementById("total").innerHTML =  count();
+// document.getElementById("total").innerHTML = listLenght;
+
